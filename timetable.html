@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title> Timetable </title>
+    <meta charset="utf-8">
+    <font size="4">
+        <style>
+            body {
+                font-family: Georgia;
+                background-color: sienna;
+            }
+
+            header {
+                border-radius: 20px;
+                border: 2px solid black;
+                background-color: orange;
+                text-align: center;
+                margin: 20px;
+                box-shadow: 10px 10px 10px;
+                display: flex;
+            }
+
+            section {
+                border: 2px solid black;
+                border-radius: 20px;
+                background-color: orange;
+                margin: 20px 60px 200px 20px;
+                padding: 20px;
+                text-align: center;
+                float: right;
+                box-shadow: 10px 10px 10px;
+                width: 14%;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"] {
+                width: 80%;
+                border-radius: 5px;
+                padding: 7px;
+            }
+
+            input[type="submit"] {
+                background-color: sandybrown;
+                padding: 10px 20px;
+                font-size: 18px;
+                cursor: pointer;
+                border-radius: 10px;
+            }
+
+            table {
+                border: 2px solid black;
+                background-color: orange;
+                border-collapse: collapse;
+                margin: 70px 0px 100px 60px;
+                box-shadow: 10px 10px 10px;
+            }
+
+            td {
+                text-align: center;
+                border: 2px solid black;
+                width: 150px;
+                height: 40px;
+            }
+
+            td.bc {
+                background-color: sandybrown;
+                border: 1px solid black;
+            }
+        </style>
+</head>
+
+<body>
+
+    <header>
+        <figure style="float: left; flex: 1;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/%D0%95%D0%BC%D0%B1%D0%BB%D0%B5%D0%BC%D0%B0_%D0%94%D0%A1%D0%A1%D0%97%D0%97%D0%86_%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%B8.svg" style="width: 27%">
+        </figure>
+        <h1><br>Розклад занять</h1>
+        <figure style="float: right; flex: 1;">
+            <img src="https://kpi.ua/images/iszzi.png" style="width: 23%">
+        </figure>
+    </header>
+
+    <section>
+        <form action="saveform.php" method="post" target="_blank">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="surname">Прізвище:</label>
+            <input type="text" id="surname" name="surname" required><br><br>
+
+            <label for="email">Електронна адреса:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="confirmPassword">Підтвердження пароля:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+
+            <input type="submit" value="Зареєструватися">
+        </form>
+    </section>
+
+    <table>
+        <tr>
+            <td></td>
+            <td>Понеділок</td>
+            <td>Вівторок</td>
+            <td>Середа</td>
+            <td>Четвер</td>
+            <td>П'ятниця'</td>
+            <td>Субота</td>
+        </tr>
+        <tr>
+            <td>08:30-09:15</td>
+            <td rowspan="2" class="bc">ФВ</td>
+            <td rowspan="2" class="bc">Іноземна мова</td>
+            <td rowspan="2" class="bc">ЗВП</td>
+            <td rowspan="2" class="bc">ФВ</td>
+            <td rowspan="2" class="bc">ФВ</td>
+            <td rowspan="2" class="bc">СР</td>
+        </tr>
+        <tr>
+            <td>09:20-10:05</td>
+        </tr>
+        <tr>
+            <td>10:25-11:10</td>
+            <td rowspan="2" class="bc">ЗВП</td>
+            <td rowspan="2" class="bc">Правознавство</td>
+            <td rowspan="2" class="bc">ЗВП</td>
+            <td rowspan="2" class="bc">Правознавство</td>
+            <td rowspan="2" class="bc">ТІМ</td>
+            <td rowspan="2" class="bc">СР</td>
+        </tr>
+        <tr>
+            <td>11:15-12:00</td>
+        </tr>
+        <tr>
+            <td>12:10-13:05</td>
+            <td rowspan="2" class="bc">ТС</td>
+            <td rowspan="2" class="bc">ТІК</td>
+            <td rowspan="2" class="bc">Програмування</td>
+            <td rowspan="2" class="bc">ТС</td>
+            <td rowspan="2" class="bc">ТІМ</td>
+            <td rowspan="2" class="bc">СР</td>
+        </tr>
+        <tr>
+            <td>13:10-13:55</td>
+        </tr>
+        <tr>
+            <td>16:10-16:55</td>
+            <td rowspan="2" class="bc">СР</td>
+            <td rowspan="2" class="bc">СР</td>
+            <td rowspan="2" class="bc">СР</td>
+            <td rowspan="2" class="bc">Програмування</td>
+            <td rowspan="2" class="bc">СР</td>
+            <td rowspan="2" class="bc"></td>
+        </tr>
+        <tr>
+            <td>17:00-17:45</td>
+        </tr>
+    </table>
+</body>
+</html>
