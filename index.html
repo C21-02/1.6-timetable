@@ -63,11 +63,26 @@
                 height: 40px;
             }
 
-            td.bc {
-                background-color: sandybrown;
-                border: 1px solid black;
-            }
+                td.bc {
+                    background-color: sandybrown;
+                    border: 1px solid black;
+                }
         </style>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var passwordField = document.getElementById('password');
+                var confirmPasswordField = document.getElementById('confirmPassword');
+                var submitButton = document.querySelector('input[type="submit"]');
+
+                submitButton.addEventListener('click', function (e) {
+                    if (passwordField.value !== confirmPasswordField.value) {
+                        alert('Паролі не співпадають. Будь ласка, перевірте їх і спробуйте ще раз.');
+                        e.preventDefault(); // Заборонити відправку форми, якщо паролі не співпадають
+                    }
+                });
+            });
+        </script>
 </head>
 
 <body>
